@@ -1,0 +1,16 @@
+{
+  "name": "testes_swapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.0.0",
+    "supertest": "^6.0.0"
+  }
+}

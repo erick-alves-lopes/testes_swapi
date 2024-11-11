@@ -1,0 +1,22 @@
+name: Teste SWAPI - Veículo inexistente
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar teste para veículo inexistente
+        run: npx jest -t "Retorna erro 404 ao pesquisar ao pesquisar um veículo inexistente"
